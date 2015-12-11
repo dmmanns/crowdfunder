@@ -39,6 +39,11 @@ body {
 
 .project-img{
 	padding-bottom: 5%;
+	opacity: 0.8;
+}
+
+.project-description{
+	font-style: italic;
 }
 
 .content {
@@ -54,8 +59,8 @@ body {
 
 .navbar-menu {
 	text-align: right;
-	float: right;
-	padding-top: 3%;
+	// float: right;
+	// padding-top: 3%;
 	padding-right: 3%;
 
 }
@@ -71,7 +76,7 @@ body {
 #scholar_logo {
 	font-color: #5A5EE7;
 	font-family: 'Pacifico', cursive;
-	float: left;
+
 	text-align: center;
 
 	a {

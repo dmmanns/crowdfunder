@@ -11,11 +11,11 @@ class ProjectsController < ApplicationController
 
   def show
     @time_left = @project.time_left
-
+    @user = current_user
     @project = Project.find(params[:id])
-
     if current_user
       @review = @project.reviews.build
+      @project_rewards = @user.rewards.where(project: @project)
     end
   end
 
@@ -29,7 +29,6 @@ class ProjectsController < ApplicationController
 
   def create
   	@project = Project.new(project_params)
-    @project.total_raised = 0
     @project.user = current_user
     if @project.save
       redirect_to projects_url
